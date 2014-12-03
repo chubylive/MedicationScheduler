@@ -11,5 +11,9 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		InfoDownloaderTask idt = new InfoDownloaderTask(MainActivity.this, true, getApplicationContext());
+		String str = "00713-0633-37";
+		idt.execute(str);
+		
 	}
 }
